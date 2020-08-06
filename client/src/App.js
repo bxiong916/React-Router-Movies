@@ -6,7 +6,7 @@ import MovieList from './Movies/MovieList.js'
 import Movie from './Movies/Movie.js'
 
 const App = () => {
-  const [saved, setSaved] = useState([]); // Stretch: the ids of "saved" movies
+  const [saved] = useState([]); // Stretch: the ids of "saved" movies
   const [movieList, setMovieList] = useState([]);
   useEffect(() => {
     const getMovies = () => {
@@ -22,13 +22,10 @@ const App = () => {
     }
     getMovies();
   }, []);
-  const addToSavedList = id => {
-    console.log(id)
-    console.log(id.id)
-    console.log(saved)
-      setSaved([...saved, id])
-    // This is stretch. Prevent the same movie from being "saved" more than once
-  };
+  // const addToSavedList = id => {
+  
+  //   // This is stretch. Prevent the same movie from being "saved" more than once
+  // };
   return (
     <div>
       <SavedList list={saved} />
