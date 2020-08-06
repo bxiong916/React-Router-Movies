@@ -3,9 +3,11 @@ import axios from 'axios';
 import { useRouteMatch } from 'react-router-dom'
 
 const Movie = (props) => {
+  console.log(props)
   const [movie, setMovie] = useState();
 
   const params = useRouteMatch();
+  console.log(params)
 
   useEffect(() => {
     const id = params.id
